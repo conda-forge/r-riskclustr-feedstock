@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = '0.2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/riskclustr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/riskclustr/riskclustr_{{ version }}.tar.gz
-  sha256: cfef0b128ff07626ccf603c02302b92ea5cc4da8301f76155d15098c683ac404
+  sha256: 5d55d1507057bae0b9aa01c38979462d2d13b26c4c557c6f79d99fa25265af48
 
 build:
   merge_build_host: True  # [win]
@@ -25,18 +25,18 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
+    - r-matrix
     - r-aod
     - r-gtools
-    - r-knitr
     - r-mlogit
-    - r-usethis
+    - r-stringr
   run:
     - r-base
+    - r-matrix
     - r-aod
     - r-gtools
-    - r-knitr
     - r-mlogit
-    - r-usethis
+    - r-stringr
 
 test:
   commands:
@@ -46,11 +46,12 @@ test:
 about:
   home: http://www.emilyzabor.com/riskclustr/, https://github.com/zabore/riskclustr
   license: GPL-2
-  summary: A collection of functions related to the study of etiologic heterogeneity both across
-    disease subtypes and across individual tumor markers. The included functions allow
+  summary: 'A collection of functions related to the study of etiologic heterogeneity both across
+    disease subtypes and across individual disease markers. The included functions allow
     one to quantify the extent of etiologic heterogeneity in the context of a case-control
     study, and provide p-values to test for etiologic heterogeneity across individual
-    risk factors.
+    risk factors. Begg CB, Zabor EC, Bernstein JL, Bernstein L, Press MF, Seshan VE
+    (2013) <doi: 10.1002/sim.5902>.'
   license_family: GPL2
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
@@ -62,23 +63,23 @@ extra:
 # Package: riskclustr
 # Type: Package
 # Title: Functions to Study Etiologic Heterogeneity
-# Version: 0.1.0
-# Authors@R: person(given = "Emily C.", family = "Zabor", email = "zabore@mskcc.org", role = c("aut", "cre"))
-# Description: A collection of functions related to the study of etiologic heterogeneity both across disease subtypes and across individual tumor markers. The included functions allow one to quantify the extent of etiologic heterogeneity in the context of a case-control study, and provide p-values to test for etiologic heterogeneity across individual risk factors.
+# Version: 0.2
+# Authors@R: person(given = "Emily C.", family = "Zabor", email = "zabore2@ccf.org", role = c("aut", "cre"))
+# Description: A collection of functions related to the study of etiologic heterogeneity both across disease subtypes and across individual disease markers. The included functions allow one to quantify the extent of etiologic heterogeneity in the context of a case-control study, and provide p-values to test for etiologic heterogeneity across individual risk factors. Begg CB, Zabor EC, Bernstein JL, Bernstein L, Press MF, Seshan VE (2013) <doi: 10.1002/sim.5902>.
 # Depends: R (>= 3.5)
 # License: GPL-2
 # URL: http://www.emilyzabor.com/riskclustr/, https://github.com/zabore/riskclustr
 # BugReports: https://github.com/zabore/riskclustr/issues
 # Encoding: UTF-8
-# Imports: aod, mlogit, gtools, knitr, usethis
+# Imports: aod, mlogit, gtools, stringr, Matrix
 # Language: en-US
 # LazyData: true
 # RoxygenNote: 6.1.1
 # VignetteBuilder: knitr
-# Suggests: testthat, covr, rmarkdown, dplyr
+# Suggests: testthat, covr, rmarkdown, dplyr, knitr, usethis
 # NeedsCompilation: no
-# Packaged: 2019-01-11 14:27:23 UTC; zabore
+# Packaged: 2019-09-06 14:19:36 UTC; ZABORE2
 # Author: Emily C. Zabor [aut, cre]
-# Maintainer: Emily C. Zabor <zabore@mskcc.org>
+# Maintainer: Emily C. Zabor <zabore2@ccf.org>
 # Repository: CRAN
-# Date/Publication: 2019-01-17 23:00:03 UTC
+# Date/Publication: 2019-09-07 15:10:02 UTC

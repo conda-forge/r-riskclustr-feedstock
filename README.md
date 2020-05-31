@@ -3,7 +3,7 @@ About r-riskclustr
 
 Home: http://www.emilyzabor.com/riskclustr/, https://github.com/zabore/riskclustr
 
-Package license: GPL-2
+Package license: GPL-2.0-only
 
 Feedstock license: BSD 3-Clause
 

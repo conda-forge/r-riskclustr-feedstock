@@ -1,4 +1,4 @@
-{% set version = "0.3" %}
+{% set version = "0.4.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/riskclustr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/riskclustr/riskclustr_{{ version }}.tar.gz
-  sha256: 254730aa4730bcdc562391b4ed114924dcbb4a25f423baf126947d081e00d48d
+  sha256: 2f3503f0ae75172100efaa8b08aa46c47d393ca193a81dac33e158f39d95b7ac
 
 build:
   merge_build_host: true  # [win]

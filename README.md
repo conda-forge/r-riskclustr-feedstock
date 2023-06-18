@@ -1,11 +1,11 @@
-About r-riskclustr
-==================
+About r-riskclustr-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-riskclustr-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.emilyzabor.com/riskclustr/, https://github.com/zabore/riskclustr
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-riskclustr-feedstock/blob/main/LICENSE.txt)
 
 Summary: A collection of functions related to the study of etiologic heterogeneity both across disease subtypes and across individual disease markers. The included functions allow one to quantify the extent of etiologic heterogeneity in the context of a case-control study, and provide p-values to test for etiologic heterogeneity across individual risk factors. Begg CB, Zabor EC, Bernstein JL, Bernstein L, Press MF, Seshan VE (2013) <doi: 10.1002/sim.5902>.
 
